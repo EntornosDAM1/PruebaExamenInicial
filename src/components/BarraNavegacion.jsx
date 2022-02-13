@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Container,Nav,NavDropdown,Form,FormControl,Button } from "react-bootstrap";
 import {NavBar, Nav,Offcanvas} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 class BarraNavegacion extends React.Component {
   constructor(props) {
@@ -33,7 +34,8 @@ class BarraNavegacion extends React.Component {
     */}
             {MenuElements.map((item) => {
             return (
-              <Nav.Link href={item.path}>{item.title}</Nav.Link>
+/*as={Link} Para que no se realice un refresh */              
+              <Nav.Link as={Link} to={item.path} role="tab">{item.title}</Nav.Link>
             );
           })}
             </Nav>

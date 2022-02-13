@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+
 
 class Ejercicio2 extends React.Component {
   constructor(props) {
@@ -34,6 +35,24 @@ class Ejercicio2 extends React.Component {
             </li>
           </li>
         </ul>
+        <Container >
+            <Form>
+              <Form.Group  controlId="formBasicEmail">
+                <Form.Label>Nombre de usuario o email:</Form.Label>
+                <Form.Control  type="email"  ref={this.inputUser} />
+              </Form.Group>
+              <br/>
+              <Form.Group  controlId="formBasicPassword">
+                <Form.Label>Contraseña</Form.Label>
+                <Form.Control type="text"   ref={this.inputPass} />
+              <br/>
+              </Form.Group>
+              <br/>
+              <Button variant="primary" type="submit" onClick={this.login}>
+                Enviar
+              </Button>
+            </Form>
+          </Container>
       </div>
     );
   }
