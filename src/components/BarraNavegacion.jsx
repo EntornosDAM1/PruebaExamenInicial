@@ -1,8 +1,7 @@
 import {MenuElements} from '../data/MenuElements'
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import {Container,Nav,NavDropdown,Form,FormControl,Button } from "react-bootstrap";
-import {NavBar, Nav,Offcanvas} from 'react-bootstrap';
+import {Container,Nav,Form,FormControl,Button,Offcanvas} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
