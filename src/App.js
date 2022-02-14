@@ -11,7 +11,6 @@ import './style.css';
 //Importar componentes
 import {MenuElements} from './data/MenuElements';
 import React from 'react';
-import Header from './components/Header';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default function App() {
@@ -37,11 +36,6 @@ export default function App() {
           />
         );
       })}
-      {/*
-      <Ejercicio1 />
-      <Ejercicio2 />
-      <Ejercicio3 />
-      */}
       </Router>
     </>
   );

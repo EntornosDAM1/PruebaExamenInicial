@@ -1,8 +1,21 @@
 import React from 'react';
+import { Row, Col, Table } from 'react-bootstrap';
+import Carrousel from './Carrousel';
 
 class Ejercicio3 extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      tableData: [],
+    };
+  }
+
+  async componentDidMount() {
+    const response = await fetch(
+      'https://www.etnassoft.com/api/v1/get/?category=Programacion&results_range=0,5&lang=spanish'
+    );
+    const responseData = await response.json();
+    this.setState({ tableData: responseData });
   }
 
   render() {
@@ -44,6 +57,37 @@ class Ejercicio3 extends React.Component {
             <b> - 1 punto</b>
           </li>
         </ol>
+        <br />
+        <h1>Ejercicio</h1>
+
+        <Row>
+          <Col lg={10} md={6}>
+            <Table responsive striped>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>title</th>
+                  <th>author</th>
+                  <th>category</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.tableData.map((item) => {
+                  return (
+                    <tr>
+                      <td>{item.ID}</td>
+                      <td>{item.title}</td>
+                      <td>{item.author}</td>
+                      <td><img src={item.cover}/></td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+              <h1>Ejercicio 2</h1>
+        <Carrousel data={this.state.tableData}/>
       </div>
     );
   }
