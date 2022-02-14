@@ -1,16 +1,9 @@
 import React from 'react';
 import './style.css';
 import BarraNavegacion from './components/BarraNavegacion';
-import Ejercicio1 from './components/Ejercicio1';
-import Ejercicio2 from './components/Ejercicio2';
-import Ejercicio3 from './components/Ejercicio3';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import React from 'react';
-import './style.css';
 
 //Importar componentes
 import {MenuElements} from './data/MenuElements';
-import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default function App() {
